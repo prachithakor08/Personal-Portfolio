@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prachi Thakor</title>
+    <link rel="icon" href="\CSS\Images\logo.jpg" type="image/jpeg">
+    <style>
+        .heading{
+            font-size: 40px !important;
+            font-weight: bold !important;
+            text-align: left;
+            margin-bottom: 1rem;
+        }    
+        /* General Styles */
+ 
+  #skills-section{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 items per row */
+    gap: 5px; /* Reduce the spacing between items */
+    justify-items: center; /* Center align each grid item */
+    margin: 0 auto; /* Center the entire section horizontally */
+    padding: 20px;
+  }
+  h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #fbc02d;
+  }
+  
+  .skill-circle {
+    flex: 1 1 calc(50% - 40px);
+    display: inline-block;
+    margin-right: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .circle {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: conic-gradient(#ab6a9b calc(var(--percentage) * 1%), #ffffff 0%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(130, 89, 146, 0.5); /* Shadow effect */
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition */
+  }
+  
+  .circle span {
+    position: absolute;
+    font-size: 1.5rem;
+    color: #000000;
+    font-weight: bold;
+  }
+  
+  .skill-circle p {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #ffffff;
+  }
+  /* Hover Effect */
+.skill-circle:hover {
+    transform: scale(1.1); /* Slightly enlarge the skill circle */
+  }
+  
+  .skill-circle:hover .circle {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.7); /* Brighter shadow on hover */
+  }
+  @media (max-width:768px){
+    #skills-section {
+        text-align: center;
+        margin-left: 0;
+      }
+  }
+    </style>
+</head>
+<body>
+    <%- include("../views/includes/navbar.ejs") %>
+    <%-include("../views/includes/background.ejs") %>
+    <h1 class="heading merriweather-regular">My Expertise</h1>
+    <section id="skills-section">
+        <div class="skill-circle">
+          <div class="circle" data-percent="95">
+            <span>95%</span>
+          </div>
+          <p>HTML & <br>CSS</p>
+        </div> 
+
+        <div class="skill-circle">
+          <div class="circle" data-percent="90">
+            <span>90%</span>
+          </div>
+          <p>C,C++ & <br>Java</p>
+        </div>
+
+        <div class="skill-circle">
+          <div class="circle" data-percent="88">
+            <span>88%</span>
+          </div>
+          <p>JavaScript & <br>bootstrap</p>
+        </div>
+
+        <div class="skill-circle">
+          <div class="circle" data-percent="90">
+            <span>90%</span>
+          </div>
+          <p>Data Structures &<br>Algorithms</p>
+        </div>
+            <div class="skill-circle">
+                <div class="circle" data-percent="80">
+                  <span>80%</span>
+                </div>
+                <p>Python<br>&nbsp;</p>
+              </div>
+
+        <div class="skill-circle">
+            <div class="circle" data-percent="95">
+              <span>95%</span>
+            </div>
+            <p>MongoDB & <br>SQL</p>
+          </div>
+
+          <div class="skill-circle">
+            <div class="circle" data-percent="93">
+              <span>93%</span>
+            </div>
+            <p>Node.js<br>Express</p>
+          </div>
+
+          <div class="skill-circle">
+            <div class="circle" data-percent="85">
+              <span>85%</span>
+            </div>
+            <p>Machine<br>Learning</p>
+          </div>
+        
+      </section>
+      <script>
+        document.querySelectorAll('.circle').forEach(circle => {
+          const percentage = circle.getAttribute('data-percent');
+          circle.style.setProperty('--percentage', percentage);
+        });
+      </script>
+      <%-include("../views/includes/footer.ejs") %>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prachi Thakor</title>
+    <link rel="icon" href="\CSS\Images\logo.jpg" type="image/jpeg">
+    <style>
+        .heading{
+            font-size: 3rem !important;
+           
+        }
+        .container{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .why-download{
+            position: relative;
+            margin: 5rem 2rem 4rem 4rem;
+            text-align: justify;
+            font-size: 1rem;
+            flex: 1;
+        }
+        .resume-buttons{
+            margin: 3rem 4rem 0 11rem;
+        }
+        .resume-buttons a{
+            border: 2px solid black;
+            color: white;
+            background-color: rgb(126, 86, 147);
+            margin-right: 3rem;
+        }
+        .img img{
+            width: 300px;
+            height: 300px;
+            border-radius: 20% ;
+            margin: 2rem 4rem 0 0;
+            position: relative;
+        }
+        .codolio-link{
+            color: rgb(155, 109, 179);
+            text-decoration: none;
+            font-size: 1rem;
+            margin-left: 4rem;
+        }
+        @media (max-width:768px) {
+            .heading{
+                font-size: 3rem !important;
+            }
+            .why-download{
+                margin: 2rem 4rem 3rem 4rem;
+                text-align: justify;
+                font-size: 1rem;
+            }
+            .resume-buttons{
+                margin: 2rem 4rem 0 3rem;
+            }
+            .resume-buttons a{
+                border: 2px solid black;
+                color: white;
+                background-color: rgb(126, 86, 147);
+                margin-left: 3rem;
+                margin-right: 3rem;
+                margin-top: 2rem;
+                width: 14rem;
+            }
+            .img img{
+                width: 300px;
+                height: 300px;
+                border-radius: 20% ;
+                margin: 2rem 2rem 0 7rem;
+            }
+            .codolio-link{
+                margin: 0 0 0 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <%- include("../views/includes/navbar.ejs") %>
+    <%-include("../views/includes/background.ejs") %>
+
+    <h1 class="heading merriweather-regular">Know me more!</h1>
+    <div class="container">
+        <div class="img">
+            <img src="\CSS\Images\resume1.jpg" alt="png">
+        </div>
+        <div class="why-download merriweather-regular">
+            <p>My resume provides a comprehensive overview of my qualifications,
+                 projects, and experiences in an easy-to-read format. 
+                Perfect for recruiters and collaborators!</p> 
+                <div class="resume-buttons">
+                    <!-- Button to View Resume -->
+                    <a href="\CSS\Images\Resume.pdf" target="_blank" class="btn view-btn">
+                        View Resume
+                    </a>
+                    <!-- Button to Download Resume -->
+                    <a href="\CSS\Images\Resume.pdf" download class="btn download-btn">
+                        Download Resume
+                    </a>
+                    <br><br><br><br>
+                </div>
+
+                 <p class="merriweather-regular">
+                        <a href="https://codolio.com/profile/prachi.thakor__" target="_blank" class="codolio-link">
+                            Check out my Codolio profile</a> and see my journey unfold!
+                 </p>
+    </div>
+
+    </div>
+    <%- include("../views/includes/footer.ejs") %>
+</body>
+</html>

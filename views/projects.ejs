@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prachi Thakor</title>
+    <link rel="icon" href="\CSS\Images\logo.jpg" type="image/jpeg">
+</head>
+<body>
+    <%- include("../views/includes/navbar.ejs") %>
+    <%-include("../views/includes/background.ejs") %>
+
+    <div class="heading">
+      <h3 class="title">My Recent<span> Works</span></h3>
+      <p class="sub-title">Here are few projects on which I've worked recently.</p>
+    </div>
+    <div class="cards-container ">
+        <div class="card " style="width: 23rem; height:30rem;">
+            <img src="\CSS\Images\BreezyHomes.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">BreezyHomes-Find Your Perfect Getaway</h5>
+              <p class="card-text">BreezyHomes is a user-friendly vacation rental platform connecting guests with the perfect stays. 
+                Built using MERN stack</p>
+              <a href="https://github.com/prachithakor08/Breezy-Homes" target="_blank"  class="btn btn-primary">Explore More</a>
+            </div>
+          </div>
+          
+          <div class="card" style="width: 23rem; height:30rem;">
+            <img src="\CSS\Images\handtalk-AI.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">HandTalk-AI-A Sign Language Translator</h5>
+              <p class="card-text">An AI-powered tool translating sign language to text, text to sign, and speech to sign.
+                Developed using Machine Learning, HTML, CSS, and JavaScript.</p>
+              <a href="#" class="btn btn-primary">Explore More</a>
+            </div>
+          </div>
+
+         <div class="card" style="width: 23rem; height:30rem;">
+              <img src="\CSS\Images\zerodha.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Zerodha Clone - Trading Platform</h5>
+                    <p class="card-text">A stock trading platform offering real-time market data, easy navigation, and interactive UI. Developed using React.js, Node.js, and MongoDB.</p>
+                    <a href="https://github.com/prachithakor08/Online-stock-trading-platform" target="_blank" class="btn btn-primary">Explore More</a>
+                </div>
+         </div>
+
+          <div class="card" style="width: 23rem; height:30rem;">
+            <img src="\CSS\Images\portfolio.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Personal Portfolio</h5>
+              <p class="card-text">This is my interactive personal portfolio developed using Node.js, Express, and EJS templating.
+                 It’s designed to showcase my skills, projects, experience, and certifications in a clean, user-friendly interface.
+                </p>
+              <a href="" target="_blank" class="btn btn-primary">Explore More</a>
+            </div>
+          </div>
+
+          <div class="card" style="width: 23rem; height:30rem;">
+            <img src="\CSS\Images\to-do list.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">To-do List-basic js website</h5>
+              <p class="card-text">A simple To-do List web app built with HTML, CSS, and JavaScript.
+                Manages adding, marking, and deleting tasks.
+                </p>
+              <a href="https://github.com/prachithakor08/Basic-To-do-List" target="_blank" class="btn btn-primary">Explore More</a>
+            </div>
+          </div>
+
+          <div class="card" style="width: 23rem;  height:30rem;">
+            <img src="\CSS\Images\Scrollscape.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">ScrollScape-Web</h5>
+              <p class="card-text">ScrollScape is a visually engaging parallax effect website that demonstrates the power of
+                 layered design in web development. Built with HTML, CSS, and pure creativity.
+                </p>
+              <a href="https://github.com/prachithakor08/ScrollScape-web" target="_blank" class="btn btn-primary">Explore More</a>
+            </div>
+          </div>
+
+    </div>
+    <%-include("../views/includes/footer.ejs")  %>
+</body>
+</html>
