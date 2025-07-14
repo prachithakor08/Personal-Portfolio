@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="/style.css">
 <style>
     .head{
     margin-top: 4rem;
@@ -11,79 +11,90 @@
     text-align: center;
     padding: 0;
 }
-.socials{
+.socials {
     display: flex;
-    margin-left: 14rem;
+    justify-content: center;
+    flex-wrap: wrap; /* <-- allows icons to wrap on small screens */
+    padding: 0;
+    margin: 2rem 0;
+    overflow-x: hidden; /* <-- prevents horizontal scroll */
 }
-.socials li{
-    margin-right: 3.6rem;
+
+.socials li {
+    margin: 0 1.5rem;
     list-style: none;
     font-size: 2rem;
 }
-.socials li a{
+.socials li a {
     color: #fff;
 }
-.text{
-    background-color: #7b4786;
-    position: absolute;
-   width: 100%;
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
-.text h5{
-    margin: 1rem 0 0 28rem;
+.text {
+    margin-top: auto;
 }
-.text p{
-    margin: 1rem 0 0 35rem;
-}
- .name{
 
-            font-size: 20px;
-            color: #310a3e;
-        }
-    @media (max-width:768px) {
-        .head{
-            text-align: center;
-        } 
-        .socials{
-            display: flex;
-            margin-left: 3rem;
-        }
-        .socials li{
-            margin-right: 3.6rem;
-            list-style: none;
-            font-size: 2rem;
-        }
-        .text h5{
-            margin: 1rem 0 0 6rem;
-        }
-        .text p{
-            margin: 1rem 0 0 12rem;
-        }
-        .name1{
-            text-align: center;
-            font-size: 20px;
-            color: #310a3e;
-        }
+.text {
+    background-color: #7b4786;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+    color: white;
+    position: relative; /* Replace 'absolute' */
+}
+
+
+.text h5, .text p {
+    margin: 0.5rem 0;
+}
+.name1 {
+    color: #fff; /* or keep #310a3e if preferred contrast */
+    font-weight: bold;
+}
+
+ @media (max-width: 768px) {
+   .text {
+    width: 100%;
+    margin: 2rem 0 0 0;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+    .text h5,
+    .text p {
+        margin: 0.5rem 0;
+        text-align: center;
     }
+
+    .name1 {
+        display: inline;
+        font-size: 20px;
+        color: #fff; /* or #310a3e if you prefer */
+    }
+}
+
+
 </style>
 <body>
-    <h1 class="head">Find me on</h1>
-    <p class="f-text">I’m just a click away.</p>
-    <div class="socials">
-        <ul class="socials">
-            <li>
-                <a href="#"><i class="fa-brands fa-square-instagram" target="_blank"></i></a>
-            </li>
-            <li>
-                <a href="https://x.com/PrachiThakor08?t=CdMps-HQJokaFY_IfSSiiA&s=09" target="_blank"><i class="fa-brands fa-square-twitter"></i></a>
-            </li>
-            <li>
-                <a href="https://www.linkedin.com/in/prachi-thakor-64b42a228/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-            </li>
-            <li>
-                <a href="https://github.com/prachithakor08" target="_blank"><i class="fa-brands fa-square-github"></i></a>
-            </li>
-        </ul>
-    </div>
+   <h1 class="head">Find me on</h1>
+<p class="f-text">I’m just a click away.</p>
+<ul class="socials">
+    <li>
+        <a href="#"><i class="fa-brands fa-square-instagram" target="_blank"></i></a>
+    </li>
+    <li>
+        <a href="https://x.com/PrachiThakor08?t=CdMps-HQJokaFY_IfSSiiA&s=09" target="_blank"><i class="fa-brands fa-square-twitter"></i></a>
+    </li>
+    <li>
+        <a href="https://www.linkedin.com/in/prachi-thakor-64b42a228/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+    </li>
+    <li>
+        <a href="https://github.com/prachithakor08" target="_blank"><i class="fa-brands fa-square-github"></i></a>
+    </li>
+</ul>
     <div class="text">
         <h5>Designed and developed by<span class="name1">  Prachi Thakor</span></h5>
         <p>Copyright &copy; 2025</p>

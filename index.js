@@ -2,8 +2,7 @@ const express = require("express");
 const app = express();
 const path = require("path");
 
-
-app.use(express.static('public')); 
+app.use(express.static(path.join(__dirname, 'public')));
 app.set("view engine","ejs");
 app.set("views",path.join(__dirname,"views"));
 
@@ -12,8 +11,8 @@ app.get("/",(req,res)=>{
     res.render("home.ejs");
 });
 
-app.listen("8080",()=>{
-    console.log("Connected to port 8080");
+app.listen("3000",()=>{
+    console.log("Connected to port 3000");
 });
 
 app.get("/about",(req,res)=>{
@@ -23,6 +22,7 @@ app.get("/about",(req,res)=>{
 app.get("/skills",(req,res)=>{
     res.render("skills.ejs");
 });
+
 
 app.get("/projects",(req,res)=>{
     res.render("projects.ejs");
